@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container"><h1>Count</h1></div>
+        <div class="container">
+            <button @click="count++">Increase</button>
+            <h2>Count is: {{ count }}</h2>
+            <button @click="count--">Decrease</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script> 
+    <script src="index.js"></script>
+    <script>
+        app.mount("#app")
+    </script>
+</body>
+</html>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        margin: 0 10px 0 10px;
+        background: rgb(2, 48, 66);
+        color: white;
+    }
+
+
+</style>
