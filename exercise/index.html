@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Aufgabe</h2>
+        <table>
+            <template v-for="(element, index) in tableElements" :key="index">
+                <tr>
+                    <td>{{element.Kursteilnehmer}}</td>
+                    <td>{{element.Jahrgang}}</td>
+                    <td>{{element.Kenntnisse}}</td>
+                </tr>
+            </template>
+        </table>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        app.mount('#app');
+    </script>
+</body>
+</html>
+<style>
+    table {
+        width: 100%;
+    }
+    th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+</style>
